@@ -1,19 +1,41 @@
-// Populate the container with a 16x16 grid of squares (divs);
+
 
 let header = document.querySelector('.header');
 let container = document.querySelector('#container');
 
-console.log(container)
 
 
 
+// Populate the container with a 16x16 grid of squares (divs);
 for(let i = 0; i < 256; i++) {
-    let div = document.createElement('div');
+    let square = document.createElement('div');
     // let divContent = document.createTextNode('');
-    div.classList.add('square');
+    square.classList.add('square');
     // div.appendChild(divContent);
-    console.log(i)
-    container.insertAdjacentElement('beforeend', div); 
+    container.insertAdjacentElement('beforeend', square); 
 }
 
-// container.insertAdjacentElement('beforeend', div);
+
+// Create "hover" event listener
+
+let squareDiv = document.querySelectorAll('.square');
+
+// console.log(squareDiv)
+
+squareDiv.forEach(square => {
+     square.addEventListener('mouseover', (e) => {
+       // console.log(e)
+       e.target.style.backgroundColor = 'green';
+    })
+    
+})
+
+// squareDiv.forEach(square => {
+//     square.addEventListener('mouseleave', (e) => {
+//       // console.log(e)
+//       e.target.style.backgroundColor = 'black';
+//    })
+   
+// })
+
+
