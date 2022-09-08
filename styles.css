@@ -10,15 +10,13 @@ body {
 }
 
 
-.container {
+/* .container {
     display: grid;
     justify-content: center;
-    grid-template-columns: repeat(34,1fr);
-    /* grid-template-columns: repeat(auto-fit, minmax(10px, auto));
-    grid-template-rows: repeat(auto-fit, minmax(10px, auto)); */
+    grid-template-columns: repeat(16,1fr);
     width: 600px;
     height: 600px;
-}
+} */
 
 .container2 {
     
@@ -31,6 +29,7 @@ body {
     height: 600px;
 
 }
+
 
 /* #container {
     display: grid;
