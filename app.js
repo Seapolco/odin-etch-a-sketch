@@ -9,6 +9,8 @@ let greenMode = document.querySelector('.green');
 let yellowMode = document.querySelector('.yellow');
 let blueMode = document.querySelector('.blue');
 let orangeMode = document.querySelector('.orange');
+let slider = document.querySelector('#myRange');
+
 
 
 let usersGrid = 32;
@@ -128,11 +130,29 @@ container.style.gridTemplateRows = `repeat(${usersGrid},1fr)`;
 container.style.width = '500px';
 container.style.height = '500px';
 
-button.addEventListener('click', () => {
-    usersGrid = parseInt(prompt('How many squares?'));
-    if(usersGrid > 100) {
-        usersGrid = 100;
-    }
+// button.addEventListener('click', () => {
+//     usersGrid = parseInt(prompt('How many squares?'));
+//     if(usersGrid > 100) {
+//         usersGrid = 100;
+//     }
+//     numOfSquares = usersGrid * usersGrid;
+//     console.log(`usersGrid${usersGrid}`)
+//     container.style.gridTemplateColumns = `repeat(${usersGrid},1fr)`;
+//     container.style.gridTemplateRows = `repeat(${usersGrid},1fr)`;
+//     container.style.display = 'grid';
+//     container.style.justifyContent = 'center';
+//     container.style.width = '500px';
+//     container.style.height = '500px';
+//     generateGrid(colorMode);
+    
+// });
+
+slider.addEventListener('mouseup', () => {
+  console.log(slider.value);
+      usersGrid = slider.value;
+    // if(usersGrid > 100) {
+    //     usersGrid = 100;
+    // }
     numOfSquares = usersGrid * usersGrid;
     console.log(`usersGrid${usersGrid}`)
     container.style.gridTemplateColumns = `repeat(${usersGrid},1fr)`;
@@ -142,8 +162,7 @@ button.addEventListener('click', () => {
     container.style.width = '500px';
     container.style.height = '500px';
     generateGrid(colorMode);
-    
-});
+})
 
 // let square = document.querySelector('.square');
 // console.log(square.style.backgroundColor)

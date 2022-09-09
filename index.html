@@ -6,16 +6,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Etch-a-Sketch</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Luckiest+Guy|Lobster">
+    <script src="https://unpkg.com/boxicons@2.1.2/dist/boxicons.js"></script>
     <script src="./app.js" defer></script>
 </head>
 <body>
-    <h1 class="header">Etch a Sketch</h1>
-    <button class="userInput">How many columns/rows?</button>
-    <button class="green">Green</button>
-    <button class="yellow">Yellow</button>
-    <button class="blue">Blue</button>
-    <button class="orange">Orange</button>
-    <button class="random">Random Color</button>
-    <div class="container"></div>
+    <header class="header">
+        <box-icon class="invader" name='invader' type='solid' color='#1cdc2f' ></box-icon>
+        <h1 class="title">Etch a Sketch</h1>
+        <box-icon class="invader" name='invader' type='solid' color='#1cdc2f' ></box-icon>  
+    </header>
+    <div class="buttons">
+        <!-- <button class="button userInput">How many columns/rows?</button> -->
+        <button class="button green">Green</button>
+        <button class="button yellow">Yellow</button>
+        <button class="button blue">Blue</button>
+        <button class="button orange">Orange</button>
+        <button class="button random">Random Color</button>
+    </div>
+    <div class="container">
+    </div>
+    <div class="slidecontainer">
+        <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+      </div>
 </body>
 </html>
